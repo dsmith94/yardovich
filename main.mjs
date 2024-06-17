@@ -51,7 +51,7 @@ function load_app() {
     watering.id = 'watering';
     photo.id = 'photo';
 
-    plants.map(x = sel.options.add(createOption(x)));
+    plants.map(x => sel.options.add(createOption(x)));
     sel.onchange = () => {
         changePlant();
     };
