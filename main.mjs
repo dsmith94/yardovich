@@ -23,7 +23,8 @@ async function changePlant() {
           method: 'GET',
           mode: 'cors',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Origin': 'https://dsmith94.github.io'
           }
         }
     );
