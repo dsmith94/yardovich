@@ -17,7 +17,16 @@ async function changePlant() {
     const sel = document.getElementById("select");
     const plant = sel.options[sel.selectedIndex].value;
 
-    const f = await fetch(`https://y36viyfqzk.execute-api.us-west-2.amazonaws.com/items/${plant}`);
+    const f = await fetch(
+        `https://y36viyfqzk.execute-api.us-west-2.amazonaws.com/items/${plant}`,
+        {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+    );
     const json = await f.json();
     const guide = document.getElementById("guide");
     const zone = document.getElementById("zone");
